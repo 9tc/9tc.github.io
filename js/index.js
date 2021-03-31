@@ -68,7 +68,7 @@ async function submit() {
                 const res = await postData(createUrl, data);
                 const sessionId = res.id;
                 //console.log("sessionID = " + sessionId);
-                const detailUrl = `http://api.paiza.io/runners/get_details?id=${sessionId}&api_key=guest`;
+                const detailUrl = `https://api.paiza.io/runners/get_details?id=${sessionId}&api_key=guest`;
                 await sleep(4000);
                 const response = await getData(detailUrl);
 
