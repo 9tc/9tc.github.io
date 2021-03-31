@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KAG Online Judge(仮)</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <link href="css/index.css" rel="stylesheet">
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/plain" src="chapters/*"></script>
+</head>
+<body>
+<div class="mx-auto mt-5" style="width: 194px;">
+    <div>
+    <select name="chapter" id="chapter">
+        <option value="t">問題を選択してください</option>
+        <option value="3_1">sum(a + b)</option>
+        <option value="3_1">chapter4 問1</option>
+    </select>
+    <select name="language" id="language">
+        <option value="cpp" selected>C++</option>
+        <option value="python">Python</option>
+    </select>
+    </div>
+</div>
+
+<div class="mx-auto mt-2">
+<div class="form-group">
+    <label for="inputSource">提出コード:</label>
+    <textarea id="inputSource" class="form-control" placeholder="提出コードを入力してください">
+#include <iostream>
+using namespace std;
+int main(){
+  int a, b;
+  cin >> a >> b;
+  cout << a + b << endl;
+  return 0;
+}
+    </textarea>
+</div>
+</div>
+
+<div class="mx-auto mt-1 mb-5" style="width: 121px;">
+    <div>
+<button type="button" class="btn btn-success" onclick="submit();">提出</button>
+<button type="button" class="btn btn-danger"  onclick="clearText();">削除</button>
+    </div>
+</div>
+<div class="log">
+    <textarea id='output' class="form-control" readonly></textarea>
+</div>
+<!---<div class="container">
+    <div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>問題番号</th>
+            <th>ステータス</th>
+            <th>実行時間</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <th class="status status1"></th>
+            <th class="time1"></th>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <th class="status status2"></th>
+            <th class="time2"></th>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <th class="status status3"></th>
+            <th class="time3"></th>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th scope="row">7</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th scope="row">8</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th scope="row">9</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th scope="row">10</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+--->
+</body>
+</html>
