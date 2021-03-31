@@ -42,7 +42,7 @@ async function submit() {
         var input = "in" + i + ".txt";
         var output = "out" + i + ".txt";
         //var buildData = build()
-        const createUrl = "http://api.paiza.io:80/runners/create";
+        const createUrl = "https://api.paiza.io:80/runners/create";
 
         var inputFile, outputFile;
 
