@@ -42,7 +42,7 @@ async function submit() {
         var input = "in" + i + ".txt";
         var output = "out" + i + ".txt";
         //var buildData = build()
-        const createUrl = "https://api.paiza.io:80/runners/create";
+        const createUrl = "http://api.paiza.io:80/runners/create";
 
         var inputFile, outputFile;
 
@@ -68,7 +68,7 @@ async function submit() {
                 const res = await postData(createUrl, data);
                 const sessionId = res.id;
                 //console.log("sessionID = " + sessionId);
-                const detailUrl = `https://api.paiza.io/runners/get_details?id=${sessionId}&api_key=guest`;
+                const detailUrl = `http://api.paiza.io/runners/get_details?id=${sessionId}&api_key=guest`;
                 await sleep(4000);
                 const response = await getData(detailUrl);
 
